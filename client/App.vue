@@ -1,23 +1,48 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+    div#app
+        router-view
 </template>
 
 <script>
 export default {
-  name: 'app'
+    name: 'app'
 }
 </script>
 
-<style>
+<style lang="less">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    min-height: 0;
+}
+html, body {
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+    font-size: 12px;
+}
+body {
+    background-color: #eee;
+    max-width: 420px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #25547e;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 1.5;
 }
 </style>
