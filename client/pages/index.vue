@@ -7,39 +7,56 @@
             mt-tab-container-item(v-for="item in tabbar.list" key="item.name" v-bind:id="item.name")
                 p {{ item.title + 1 }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
                 p {{ item.title }}
-                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}
                 p {{ item.title }}
                 p {{ item.title + 2}}
 
@@ -123,6 +140,7 @@
             }
         },
         methods: {
+            // 切换tabbar
             triggerTab (name) {
                 this.tabbar.active = name
             },

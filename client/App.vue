@@ -1,6 +1,6 @@
 <template lang="pug">
     div#app
-        router-view
+        router-view(transition="fade" transition-mode="out-in" keep-alive)
 </template>
 
 <script>
