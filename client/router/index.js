@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/Index'
+
+import routes from './routes'
 
 Vue.use(Router)
-
+/**
+ * 路由入口
+ */
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Index',
-      component: Index
-    }
-  ]
+    mode: 'hash',
+    routes
 })
