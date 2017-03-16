@@ -49,5 +49,6 @@ body {
     height: 100%;
     font-size: 12px;
     line-height: 1.5;
+    overflow: hidden;
 }
 </style>

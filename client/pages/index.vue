@@ -1,11 +1,47 @@
 <template lang="pug">
     .index(v-bind:class="{'show-right-side': navbar.homepage.active}")
-        mt-header.entrance-header(title="酷鱼实验室" fixed)
+        mt-header.entrance-header(title="酷鱼实验室")
             mt-button(v-on:click.native.stop="triggerHomepage" slot="right")
                 img(src="../assets/icon_more@2x.png")
         mt-tab-container.entrance-page(v-model="tabbar.active" v-on:click.native.stop="triggerHomepage('false')")
             mt-tab-container-item(v-for="item in tabbar.list" key="item.name" v-bind:id="item.name")
-                span {{ item.title }}
+                p {{ item.title + 1 }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title }}p {{ item.title }}
+                p {{ item.title }}
+                p {{ item.title + 2}}
 
         mt-tabbar.entrance-tabber
             mt-tab-item(v-on:click.native="triggerTab('tab-play')")
@@ -26,9 +62,30 @@
 
         .entrance-right-side
             .entrance-right-side-user
-                span 用户
+                img.entrance-right-side-user-avatar(src="../assets/avatar.png")
+                .entrance-right-side-user-username 白衣信徒
+                .entrance-right-side-user-badge  江湖小虾米
+            .entrance-right-side-bar
+                .entrance-right-side-bar-item
+                    .entrance-right-side-bar-item-title 财富
+                    .entrance-right-side-bar-item-count.wealth 9000
+                .entrance-right-side-bar-item
+                    .entrance-right-side-bar-item-title 排名
+                    .entrance-right-side-bar-item-count.ranking 1024
             .entrance-right-side-menus
-                span 菜单
+                .entrance-right-side-menu
+                    img.entrance-right-side-menu-icon(src="../assets/right-side-menu-friends.png")
+                    .entrance-right-side-menu-title 我的好友
+                .entrance-right-side-menu
+                    img.entrance-right-side-menu-icon(src="../assets/right-side-menu-message.png")
+                    .entrance-right-side-menu-title 我的消息
+                .entrance-right-side-menu
+                    img.entrance-right-side-menu-icon(src="../assets/right-side-menu-feedbook.png")
+                    .entrance-right-side-menu-title 意见反馈
+                .entrance-right-side-menu
+                    img.entrance-right-side-menu-icon(src="../assets/right-side-menu-about.png")
+                    .entrance-right-side-menu-title 关于我们
+
 </template>
 <script>
     export default {
@@ -91,7 +148,7 @@
 </script>
 <style lang="less">
 .index {
-    height: 100%;
+    height: 100%;    
     transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
 }
 .entrance-page {
@@ -155,6 +212,11 @@
 }
 .entrance-header {
     background-color: #2e3339;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     .mint-header-button {
         .mint-button-text {
             img {
@@ -166,10 +228,10 @@
 .entrance-tabber {
     border-top: 1px solid #edeeee;
     .mint-tab-item.is-selected {
-        background-color: #f8f9fb;
+        background-color: #2e3339;
     }
     .mint-tab-item-label {
-        color: #8e94a7;
+        color: #7fa3c6;
     }
 }
 .entrance-right-side {
@@ -182,6 +244,75 @@
     z-index: 1;
     color: #fff;
     margin-right: -80%;
+    padding: 0 2rem;
+    overflow-y: auto;
+    .entrance-right-side-user {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2rem;
+        .entrance-right-side-user-avatar {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            border: 3px solid #7f8891;
+            margin-top: 6rem;
+        }
+        .entrance-right-side-user-username {
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-top: .8rem;
+            color: #fff;
+        }
+        .entrance-right-side-user-badge {
+            background-color: #57a8ed;
+            color: #fff;
+            padding: .2rem .8rem;
+            line-height: 1.5;
+            border-radius: 1rem;
+            display: inline-block;
+            margin-top: .4rem;
+            transform: scale(.8);
+        }
+    }
+    .entrance-right-side-bar {
+        border-top: 1px solid #7fa3c6;
+        padding: 1rem 0;
+        overflow: hidden;
+        text-align: center;
+        color: #687d92;
+        .entrance-right-side-bar-item {
+            float: left;
+            width: 50%;
+            &:first-child {
+                border-right: 1px solid #7fa3c6;
+                margin-left: -1px;
+            }
+            .entrance-right-side-bar-item-count {
+                font-size: 2.2rem;
+                &.wealth {
+                    color: #e49b43;
+                }
+                &.ranking {
+                    color: #5793cc;
+                }
+            }
+        }
+    }
+    .entrance-right-side-menus {
+        border-top: 1px solid #7fa3c6;
+        padding: 2rem 0;
+        color: #687d92;
+        overflow: hidden;
+        .entrance-right-side-menu {
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding: 1rem;
+            img {
+                width: 50%;
+            }
+        }
+    }
 }
 .show-right-side {
     -webkit-transform: translate3d(-80%,0,0);
